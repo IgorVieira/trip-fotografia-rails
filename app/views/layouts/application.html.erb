@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta charset="utf-8">
+  <title>Trip Fotografia</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script src="https://use.fontawesome.com/6955255fc8.js"></script>
+</head>
+<body>
+
+    <%= render 'layouts/navbar'%>
+
+    <%= yield %>
+
+    <%= render 'layouts/footer'%>
+
+
+</body>
+</html>

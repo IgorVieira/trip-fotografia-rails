@@ -1,0 +1,20 @@
+<div class="container">
+    <nav>
+    <ul>
+		<li><%= link_to 'Home', root_path%></li>
+		<li><%= link_to 'Fotos', projects_path%></li>
+        <li><%= link_to 'Blog', articles_path%></li>
+		<li><%= link_to 'Contato', new_contact_path%></li>   
+        <li><%= link_to 'Novo Post', new_article_path%></li>
+        <li><%= link_to 'Novo Album', new_project_path%></li>
+        
+    </ul>
+    
+    <div class="handle">
+        <button class="hamburger" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+    </div>
+</nav>

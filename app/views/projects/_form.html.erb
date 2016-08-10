@@ -1,0 +1,29 @@
+<% if @project.errors.any? %>
+  <ul>
+    <%= @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= form_for @project, html: { multipart: true } do |f| %>
+  
+  <div>
+    <%= f.file_field :image %>
+  </div>
+  <div>
+    <%= f.label :title %>
+  </div>
+  <div>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :body %>
+  </div>
+  <div>
+    <%= f.cktext_area :body, rows: 20 %>
+  </div>
+  <br>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

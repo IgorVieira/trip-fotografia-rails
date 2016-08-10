@@ -1,0 +1,24 @@
+<section class="description">
+	<hr class="style-eight"></hr>
+</section>
+<section class="blog_context">
+
+<% @articles.each do |article| %>
+  
+
+  <%= image_tag article.image%>
+  <h3><%= article.title.html_safe %></h3>
+  <div><%= article.body.first(350).html_safe %></div>
+    <%= link_to "Mais", article_path(article) %> |
+  <%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %> |
+ <%= link_to "Edit Article", edit_article_path(article) %>
+   
+   <div><%= article.created_at.strftime("%b %d, %Y")%></div>
+   <hr />
+ 
+<% end %>
+
+ <h1 align="center"><%= will_paginate @project %></h1>
+
+
+</section>

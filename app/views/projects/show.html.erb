@@ -1,0 +1,9 @@
+<section class="description">
+	<hr class="style-eight"></hr>
+</section>
+
+<section class="blog_context">
+ <h3><%= @project.title%></h3>
+ <div><%= @project.body.html_safe%></div>
+ <div><%= @project.created_at.strftime("%b %d, %Y")%></div>
+</section>
